@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MNIST TVM recognizer</string>
+    <string name="prediction_text">Prediction:</string>
+    <string name="inference_time_text">Inference time:</string>
+</resources>
