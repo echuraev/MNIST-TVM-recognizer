@@ -9,7 +9,7 @@ android {
     defaultConfig {
         applicationId "com.deelvin.mnist_tvm_recognizer"
         minSdk 24
-        targetSdk 33
+        targetSdk 30
         versionCode 1
         versionName "1.0"
 

@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.22.1)
 project("mnist_tvm_recognizer")
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_BUILD_TYPE Release)
 
 find_library(
     log-lib

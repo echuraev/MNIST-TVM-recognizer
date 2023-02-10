@@ -65,17 +65,12 @@ public class PaintView extends View {
                 path.lineTo(x, y);
                 break;
             case MotionEvent.ACTION_UP:
-                currTime = new Date();
-                ms = (long) (currTime.getTime() - lastTouch.getTime());
-                if (ms > 100) {
-                    Log.w("myApp", "on break " + Integer.toString(this.getWidth()));
-                    float scaleFactorX = TVM_MNIST_Helper.MNIST_INPUT_W / (float) this.getWidth();
-                    float scaleFactorY = TVM_MNIST_Helper.MNIST_INPUT_H / (float) this.getHeight();
-                    scaleMatrix.setScale(scaleFactorX, scaleFactorY);
-                    path.transform(scaleMatrix, bitmapPath);
-                    bitmapCanvas.drawPath(bitmapPath, canvasPaint);
-                    MainActivity.setBitmap(bitmap);
-                }
+                float scaleFactorX = TVM_MNIST_Helper.MNIST_INPUT_W / (float) this.getWidth();
+                float scaleFactorY = TVM_MNIST_Helper.MNIST_INPUT_H / (float) this.getHeight();
+                scaleMatrix.setScale(scaleFactorX, scaleFactorY);
+                path.transform(scaleMatrix, bitmapPath);
+                bitmapCanvas.drawPath(bitmapPath, canvasPaint);
+                MainActivity.setBitmap(bitmap);
                 break;
             default:
                 return false;
